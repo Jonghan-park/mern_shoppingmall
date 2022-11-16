@@ -1,3 +1,5 @@
+import data from "./data";
+
 function App() {
   return (
     <div className="App">
@@ -15,198 +17,38 @@ function App() {
         </header>
         <main>
           <div className="row center">
-            <div className="card">
-              <a href="product.html">
-                <img
-                  className="medium"
-                  src="./images/product-1.jpg"
-                  alt="product"
-                />
-              </a>
-              <div className="card-body">
-                <a href="product.html">
-                  <h2>USB mini wind power handheld Fan</h2>
-                </a>
-                <div className="rating">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
+            {data.products.map((product) => {
+              return (
+                <div className="card" key={product._id}>
+                  <a href={`/product/${product._id}`}>
+                    <img className="medium" src={product.image} alt="product" />
+                  </a>
+                  <div className="card-body">
+                    <a href={`/product/${product._id}`}>
+                      <h2>{product.name}</h2>
+                    </a>
+                    <div className="rating">
+                      <span>
+                        <i className="fa fa-star"></i>
+                      </span>
+                      <span>
+                        <i className="fa fa-star"></i>
+                      </span>
+                      <span>
+                        <i className="fa fa-star"></i>
+                      </span>
+                      <span>
+                        <i className="fa fa-star"></i>
+                      </span>
+                      <span>
+                        <i className="fa fa-star"></i>
+                      </span>
+                    </div>
+                    <div className="price">${product.price}</div>
+                  </div>
                 </div>
-                <div className="price">$0.95</div>
-              </div>
-            </div>
-            <div className="card">
-              <a href="product.html">
-                <img
-                  className="medium"
-                  src="./images/product-1.jpg"
-                  alt="product"
-                />
-              </a>
-              <div className="card-body">
-                <a href="product.html">
-                  <h2>USB mini wind power handheld Fan</h2>
-                </a>
-                <div className="rating">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div>
-                <div className="price">$0.95</div>
-              </div>
-            </div>
-            <div className="card">
-              <a href="product.html">
-                <img
-                  className="medium"
-                  src="./images/product-1.jpg"
-                  alt="product"
-                />
-              </a>
-              <div className="card-body">
-                <a href="product.html">
-                  <h2>USB mini wind power handheld Fan</h2>
-                </a>
-                <div className="rating">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div>
-                <div className="price">$0.95</div>
-              </div>
-            </div>
-            <div className="card">
-              <a href="product.html">
-                <img
-                  className="medium"
-                  src="./images/product-1.jpg"
-                  alt="product"
-                />
-              </a>
-              <div className="card-body">
-                <a href="product.html">
-                  <h2>USB mini wind power handheld Fan</h2>
-                </a>
-                <div className="rating">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div>
-                <div className="price">$0.95</div>
-              </div>
-            </div>
-            <div className="card">
-              <a href="product.html">
-                <img
-                  className="medium"
-                  src="./images/product-1.jpg"
-                  alt="product"
-                />
-              </a>
-              <div className="card-body">
-                <a href="product.html">
-                  <h2>USB mini wind power handheld Fan</h2>
-                </a>
-                <div className="rating">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                </div>
-                <div className="price">$0.95</div>
-              </div>
-            </div>
-            <div className="card">
-              <a href="product.html">
-                <img
-                  className="medium"
-                  src="./images/product-1.jpg"
-                  alt="product"
-                />
-              </a>
-              <div className="card-body">
-                <a href="product.html">
-                  <h2>USB mini wind power handheld Fan</h2>
-                </a>
-                <div className="rating">
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star"></i>
-                  </span>
-                  <span>
-                    <i className="fa fa-star-half-alt"></i>
-                  </span>
-                </div>
-                <div className="price">$0.95</div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </main>
         <footer className="row center">All right reserved</footer>
