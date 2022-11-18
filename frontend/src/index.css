@@ -66,6 +66,10 @@ button{
   background-color: #f8f8f8;
   cursor: pointer;
 }
+button:hover{
+  border: 0.1rem #404040 solid;
+  font-weight: 700;
+}
 button.primary{
   background-color: #2884db;
 
@@ -114,7 +118,9 @@ img.medium{
   max-width: 35rem;
   width: 100%;
 }
-
+img.large{
+  width: 85%;
+}
 /* Card */
 .card{
   border: 0.1rem #c0c0c0 solid;
