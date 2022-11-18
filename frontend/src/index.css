@@ -21,15 +21,17 @@ body{
 }
 header{
   grid-area: header;
-  background-color: #203040;
+  background-color: #2884db;
+  height: 6rem;
 }
 main{
   grid-area: main;
   padding: 1rem;
+  height: auto;
 }
 footer{
   grid-area: footer;
-  background-color: #203040;
+  background-color: #2884db;
   color: #ffffff;
 }
 /* Common */
@@ -54,6 +56,23 @@ ul{
 }
 li{
   margin-top: 1rem;
+}
+button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+button.primary{
+  background-color: #2884db;
+
+}
+button.block{
+  width: 100%;
+
 }
 /* Header */
 header a{
@@ -122,4 +141,12 @@ img.medium{
 }
 .rating span:last-child{
   color: #203040;
+}
+
+/* Alert */
+.success{
+  color: #20a020;
+}
+.error{
+  color: #a02020;
 }
