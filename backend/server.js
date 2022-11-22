@@ -1,9 +1,15 @@
-const express = require("express");
+import express from "express";
+import data from "../backend/data.js";
 const app = express();
+const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.send("Server is ready");
 });
-app.listen(5000, () => {
-  console.log("Server is running at 5000 port");
+
+app.get("/api/products", (req, res) => {
+  res.send(data.products);
+});
+app.listen(port, () => {
+  console.log(`Server is running at ${port}`);
 });
